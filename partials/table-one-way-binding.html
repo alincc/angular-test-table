@@ -1,0 +1,52 @@
+
+    <table class="table">
+		<thead>
+			<tr>
+				<th><input type="checkbox" ng-click="selectAll()"/></th>
+				<th>Status</th>
+				<th>Name</th>
+				<th>Email</th>
+				<th>field1</th>
+				<th>field2</th>
+				<th>field3</th>
+				<th>field4</th>
+				<th>field5</th>
+				<th>field6Date</th>
+				<th>field7</th>
+				<th>field8</th>
+				<th>field9</th>
+				<th>field10</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="row in dataset" post-repeat-directive>
+				<td><input type="checkbox" ng-model="row.select"/></td>
+				
+				<td>{{:: row.status }}</td>
+				
+				<td>{{:: row.name }}</td>
+				
+				<td>{{:: row.email }}</td>
+				
+				<td>{{:: row.field1 }}</td>
+				
+				<td>{{:: row.field2 }}</td>
+				
+				<td>{{:: row.field3 }}</td>
+				
+				<td>{{:: row.field4 }}</td>
+				
+				<td>{{:: row.field5 }}</td>
+				
+				<td>{{:: row.field6Data | date }}</td>
+				
+				<td>{{:: row.field7 | cf }}</td>
+				
+				<td>{{:: row.field8 }}</td>
+				
+				<td>{{:: row.field9 }}</td>
+				
+				<td>{{:: row.field10 }}</td>
+			</tr>
+		</tbody>
+	</table>

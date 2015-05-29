@@ -1,0 +1,18 @@
+{
+  "name": "test-angular-rendering",
+  "version": "0.0.0",
+  "description": "Test AngularJs rendering speed using tables and a large dataset",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alin Capitanescu",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^3.3.4",
+    "http-server": "^0.8.0"
+  },
+  "devDependencies": {
+    "json-schema-faker": "^0.1.10"
+  }
+}

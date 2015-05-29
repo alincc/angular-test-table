@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+    <meta name="description" content="">
+    <meta name="author" content="Alin Capitanescu">
+
+    <title>Test rendering with large dataset</title>
+
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+
+  <body ng-app="app">
+    <div class="container" ng-controller="TestRendering">
+
+      <div class="page-header">
+        <h1>AngularJS 1.4.0</h1>
+        <p class="lead">Render a table using a large dataset</p>
+      </div>
+
+	  <div ng-include="'partials/header.html'"></div>
+	 
+      <div class="row">        
+		<div ng-include="'partials/table-one-way-binding.html'"></div>
+		
+      </div>
+    </div> <!-- /container -->
+	
+	<script src="libs/angular/1.4.0/angular.min.js"></script>
+	<script src="app/app.js"></script>
+  </body>
+</html>
