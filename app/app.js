@@ -60,7 +60,7 @@ angular.module('app', [])
 		
 		return $http(
 		{
-			url: 'data' + recCount + '.json',
+			url: 'data/' + recCount + '.json',
 			params: { 'nocache': new Date().getTime() }
 		});
 	}

@@ -80,7 +80,7 @@ if(process.argv.length==3)
 	totalRecordsToFake = process.argv[2];
 }
 
-var datafile = "data" + totalRecordsToFake + ".json";
+var datafile = totalRecordsToFake + ".json";
 
 var result = [];
 for(i=0;i<totalRecordsToFake;i++)
