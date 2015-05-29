@@ -2,12 +2,15 @@
 Test Angular ng-repeat rendering speed of a &lt;table/> with large dataset
 
 ### Usage
-Online test
-    [](https://rawgit.com/alincc/angular-test-table/master/index2.html)
+You can [test online](https://rawgit.com/alincc/angular-test-table/master/index2.html)
 
-Local test
+or
+
+Clone the repository on your local machine. You need node.js
 ```
 git clone https://github.com/alincc/angular-test-table.git
+cd angular-test-table
+npm update
 run.cmd
 ```
 
