@@ -25,6 +25,7 @@ angular.module('app', [])
 	
 	$scope.run = function(counter){
 		$scope.running = true;
+        $scope.dataset = [];
 		TestService.load(counter)
 			.success(function(response){
 				$scope.dataset = response;
@@ -60,8 +61,8 @@ angular.module('app', [])
 		
 		return $http(
 		{
-			url: 'data/' + recCount + '.json',
-			params: { 'nocache': new Date().getTime() }
+			url: 'data/' + recCount + '.json'//,
+			//params: { 'nocache': new Date().getTime() }
 		});
 	}
 	

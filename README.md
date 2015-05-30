@@ -28,9 +28,20 @@ The 5000 generated dataset has a size of 2.14 MB.
 - AngularJS v1.2.20
 - AngularJS v1.3.9
 - AngularJS v1.4.0
+- Angular v2.0.0-alpha25
 
-TODO:
-- Angular 2
+                |   500   |  5000
+--------------- | ------- | -------
+Angular v1.2.20 | ~550 ms | ~4000ms
+Angular v1.3.9  | ~400 ms | ~3000ms
+Angular v1.4.0  | ~550 ms | ~3000ms
+Angular v2.0.0-a| ~67 ms  | ~5000ms
+
+Note: Angular v2 sample does not include any filters. All times are averages obtained on my laptop.
+
+TODO
+- Aurelia
+- ReactJS
 
 
 ![](https://github.com/alincc/angular-test-table/blob/master/img/sample.png)
