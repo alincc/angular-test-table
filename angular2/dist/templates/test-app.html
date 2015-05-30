@@ -1,0 +1,38 @@
+<style>
+    a.disabled {
+        pointer-events: none;
+        cursor: default;
+    }
+
+</style>
+
+
+<div class="container">
+
+    <div class="page-header">
+        <h1>AngularJS 2.0.0-alpha.25</h1>
+        <p class="lead">Render a table using a large dataset</p>
+    </div>
+
+    <p>
+        <a class="btn btn-lg btn-link" role="button" href="../../index.html">AngularJS v1.2.20</a>
+        <a class="btn btn-lg btn-link" role="button" href="../../index2.html">AngularJS v1.3.9</a>
+        <a class="btn btn-lg btn-link" role="button" href="../../index3.html">AngularJS v1.4.0</a>
+        <a class="btn btn-lg btn-link selected" role="button" href="/angular2/dist/index3.html">AngularJS v2.0.0-alpha.25</a>
+    </p>
+
+    <p>
+        <a class="btn btn-lg btn-success" role="button" [class.disabled]="running" (click)="run(500)">500 records</a>
+        <a class="btn btn-lg btn-success" role="button" [class.disabled]="running" (click)="run(1500)">1500 records</a>
+        <a class="btn btn-lg btn-success" role="button" [class.disabled]="running" (click)="run(2500)">2500 records</a>
+        <a class="btn btn-lg btn-success" role="button" [class.disabled]="running" (click)="run(5000)">5000 records</a>
+    </p>
+
+    <div class="well">
+        <div>Check console for duration</div>
+    </div>
+
+    <div class="row">
+        <test-table [dataset]="records"></test-table>
+    </div>
+</div> <!-- /container -->

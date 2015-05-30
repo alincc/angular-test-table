@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test App</title>
+
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .container {
+            margin: 0px 15px;
+        }
+
+        .selected, a.selected:hover , a.selected:active {
+            background-color: #337ab7;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <test-app></test-app>
+
+    <!-- ES6-related imports -->
+    <script src="lib/traceur-runtime.js"></script>
+    <script src="lib/es6-module-loader-sans-promises.src.js"></script>
+    <script src="lib/extension-register.js"></script>
+    <script src="lib/Reflect.js"></script>
+    <script>
+        register(System);
+    </script>
+
+    <!-- Angular2-related imports -->
+    <script src="lib/zone.js"></script>
+    <script src="lib/long-stack-trace-zone.js"></script>
+    <script src="lib/angular2.js"></script>
+
+    <script>
+        System.import('TestApp').catch(console.log.bind(console));
+    </script>
+</body>
+</html>
