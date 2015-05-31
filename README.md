@@ -1,5 +1,5 @@
 # angular-test-table
-Test Angular 1.x, Angular 2.0 alpha25 and ReactJS rendering performance of a &lt;table/> with large dataset
+Test Angular 1.x, Angular 2.0 alpha25 and ReactJS rendering performance of a &lt;table/> with large dataset.
 
 ### Usage
 
