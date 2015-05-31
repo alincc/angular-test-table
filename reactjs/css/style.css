@@ -1,8 +1,10 @@
-.container {
-	margin: 0px 15px;
-}
 
 .selected, a.selected:hover , a.selected:active {
 	background-color: #337ab7;
 	color: white;
+}
+
+#table{
+    overflow: auto;
+    height: 400px;
 }

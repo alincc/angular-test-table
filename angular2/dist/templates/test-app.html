@@ -15,10 +15,11 @@
     </div>
 
     <p>
-        <a class="btn btn-lg btn-link" role="button" href="../../index.html">AngularJS v1.2.20</a>
-        <a class="btn btn-lg btn-link" role="button" href="../../index2.html">AngularJS v1.3.9</a>
-        <a class="btn btn-lg btn-link" role="button" href="../../index3.html">AngularJS v1.4.0</a>
-        <a class="btn btn-lg btn-link selected" role="button" href="/angular2/dist/index3.html">AngularJS v2.0.0-alpha.25</a>
+        <a class="btn btn-lg btn-link" role="button" href="../../angular1/index.html">AngularJS v1.2.20</a>
+        <a class="btn btn-lg btn-link" role="button" href="../../angular1/index2.html">AngularJS v1.3.9</a>
+        <a class="btn btn-lg btn-link" role="button" href="../../angular1/index3.html">AngularJS v1.4.0</a>
+        <a class="btn btn-lg btn-link selected" role="button" >AngularJS v2.0.0-alpha.25</a>
+        <a class="btn btn-lg btn-link" role="button" href="../../reactjs/index.html">ReactJS 0.13.0</a>
     </p>
 
     <p>
@@ -29,10 +30,10 @@
     </p>
 
     <div class="well">
-        <div>Check console for duration</div>
+        <div>Duration: {{getDuration()}} ms</div>
     </div>
 
-    <div class="row">
+    <div class="row" id="table">
         <test-table [dataset]="records"></test-table>
     </div>
 </div> <!-- /container -->

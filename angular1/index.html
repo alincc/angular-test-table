@@ -18,16 +18,16 @@
   <body ng-app="app">
     <div class="container" ng-controller="TestRendering">
 
-      <div class="page-header">
-        <h1>AngularJS 1.2.20</h1>
-        <p class="lead">Render a table using a large dataset</p>
-      </div>
+        <div class="page-header">
+            <h1>AngularJS 1.2.20</h1>
+            <p class="lead">Render a table using a large dataset</p>
+        </div>
 
-	  <div ng-include="'partials/header.html'"></div>
-	  
-      <div class="row">        
-		<div ng-include="'partials/table.html'"></div>		
-      </div>
+        <div ng-include="'partials/header.html'"></div>
+
+        <div class="row">
+            <div id="table" ng-include="'partials/table.html'"></div>
+        </div>
     </div> <!-- /container -->
 	
 	<script src="libs/angular/1.2.20/angular.min.js"></script>

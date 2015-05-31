@@ -19,7 +19,7 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr ng-repeat="row in dataset" post-repeat-directive>
+			<tr ng-repeat="row in dataset track by row.id" post-repeat-directive>
 				<td><input type="checkbox" ng-model="row.select"/></td>
 				
 				<td>{{ row.status }}</td>

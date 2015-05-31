@@ -1,0 +1,2 @@
+https://www.codementor.io/reactjs/tutorial/reactjs-vs-angular-js-performance-comparison-knockout
+https://gist.github.com/RichAyotte/a7b8780341d5e75beca7

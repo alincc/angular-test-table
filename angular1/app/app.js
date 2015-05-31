@@ -6,23 +6,7 @@ angular.module('app', [])
 		$scope.duration = d;		
 		$scope.totalWatchers = TestService.countWatchers();
 	});
-	
-	$scope.run500 = function(){
-		$scope.run(500);
-	};
-	
-	$scope.run1500 = function(){
-		$scope.run(1500);
-	};
-	
-	$scope.run2500 = function(){
-		$scope.run(2500);
-	};
-	
-	$scope.run5000 = function(){
-		$scope.run(5000);
-	};
-	
+
 	$scope.run = function(counter){
 		$scope.running = true;
         $scope.dataset = [];
@@ -61,7 +45,7 @@ angular.module('app', [])
 		
 		return $http(
 		{
-			url: 'data/' + recCount + '.json'//,
+			url: '../data/' + recCount + '.json'//,
 			//params: { 'nocache': new Date().getTime() }
 		});
 	}

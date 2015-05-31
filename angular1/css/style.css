@@ -1,0 +1,9 @@
+#table{
+    overflow: auto;
+    height: 400px;
+}
+
+.selected, a.selected:hover , a.selected:active {
+	background-color: #337ab7;
+	color: white;
+}

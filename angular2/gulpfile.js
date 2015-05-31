@@ -54,14 +54,14 @@ gulp.task('bootstrap', function () {
 });
 
 // Data
-gulp.task('data', function () {
-    gulp.src([
-        '../data/**/*'
-    ])
-        .pipe(gulp.dest('dist/data'));
-});
+//gulp.task('data', function () {
+//    gulp.src([
+//        '../data/**/*'
+//    ])
+//        .pipe(gulp.dest('dist/data'));
+//});
 
-gulp.task('libs', ['angular2', 'bootstrap','data'], function () {
+gulp.task('libs', ['angular2', 'bootstrap'/*,'data'*/], function () {
     var size = require('gulp-size');
     return gulp.src(PATHS.lib)
         .pipe(size({showFiles: true, gzip: true}))

@@ -12,7 +12,7 @@ export class TestService {
     }
 
     load(id) {
-        return this.$http.get('data/' + id + '.json');
+        return this.$http.get('../../data/' + id + '.json');
     }
 
     setStart() {

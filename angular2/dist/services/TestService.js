@@ -17,7 +17,7 @@ System.register("services/TestService", ["angular2/angular2", "angular2/src/serv
         }
         return ($traceurRuntime.createClass)(TestService, {
           load: function(id) {
-            return this.$http.get('data/' + id + '.json');
+            return this.$http.get('../../data/' + id + '.json');
           },
           setStart: function() {
             console.log('Mark Start');

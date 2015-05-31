@@ -18,13 +18,14 @@ import {TestService} from 'services/TestService';
 class TestApp {
     running = false;
     testService: TestService;
-    duration: int = 0;
+    duration;
 
     constructor(ts:TestService) {
         this.testService = ts;
     };
 
     run=function(counter){
+        var vm = this;
         this.running = true;
         this.records = new Array();
 
@@ -36,7 +37,15 @@ class TestApp {
                 this.testService.setStart();
 
                 // Set records
-                this.records = JSON.parse(res);
+                var data = JSON.parse(res);
+
+                // Start measure
+                var start = new Date();
+                this.records = data;
+
+                setTimeout(function(){
+                    vm.duration = new Date() - start;
+                }, 0, true);
 
                 this.running = false;
             },
@@ -45,6 +54,10 @@ class TestApp {
                 this.running = false;
             });
     };
+
+    getDuration(){
+        return this.duration;
+    }
 }
 
 bootstrap(TestApp);
