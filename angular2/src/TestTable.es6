@@ -10,22 +10,12 @@ import {TestService} from 'services/TestService';
 })
 @View({
     templateUrl: 'templates/test-table.html',
-    directives: [NgFor, NgIf]
+    directives: [NgFor]
 })
 export class TestTable {
-    startTime: Date;
-    endTime: Date;
     testService: TestService;
 
     constructor(testService: TestService) {
         this.testService = testService;
-    };
-
-    setIndex = function(i){
-        if(!this.dataset) return;
-
-        if(i == this.dataset.length - 1){
-            this.testService.setEnd();
-        }
     };
 }

@@ -19,13 +19,6 @@ System.register("TestTable", ["angular2/angular2", "services/TestService"], func
     execute: function() {
       TestTable = (function() {
         function TestTable(testService) {
-          this.setIndex = function(i) {
-            if (!this.dataset)
-              return ;
-            if (i == this.dataset.length - 1) {
-              this.testService.setEnd();
-            }
-          };
           this.testService = testService;
         }
         return ($traceurRuntime.createClass)(TestTable, {}, {});
@@ -38,7 +31,7 @@ System.register("TestTable", ["angular2/angular2", "services/TestService"], func
             services: [TestService]
           }), new View({
             templateUrl: 'templates/test-table.html',
-            directives: [NgFor, NgIf]
+            directives: [NgFor]
           })];
         }});
       Object.defineProperty(TestTable, "parameters", {get: function() {

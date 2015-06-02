@@ -33,6 +33,7 @@ The content is a JSON array with 14 fields.
 
 TODO
 - Aurelia
+- raw (direct DOM manipulation)
 
 
 ![](https://github.com/alincc/angular-test-table/blob/master/img/sample.png)

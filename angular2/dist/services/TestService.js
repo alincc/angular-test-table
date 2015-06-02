@@ -15,32 +15,9 @@ System.register("services/TestService", ["angular2/angular2", "angular2/src/serv
         function TestService(xhr) {
           this.$http = xhr;
         }
-        return ($traceurRuntime.createClass)(TestService, {
-          load: function(id) {
+        return ($traceurRuntime.createClass)(TestService, {load: function(id) {
             return this.$http.get('../../data/' + id + '.json');
-          },
-          setStart: function() {
-            console.log('Mark Start');
-            this.start = new Date();
-            this.end = null;
-            this.updateDuration();
-          },
-          setEnd: function() {
-            console.log('Mark End');
-            this.end = new Date();
-            this.updateDuration();
-          },
-          updateDuration: function() {
-            var duration = this.end - this.start;
-            if (!duration || duration < 0)
-              return -1;
-            this.duration = duration;
-            console.log(this.duration + "ms");
-          },
-          getDuration: function() {
-            return this.duration;
-          }
-        }, {});
+          }}, {});
       }());
       $__export("TestService", TestService);
       Object.defineProperty(TestService, "parameters", {get: function() {

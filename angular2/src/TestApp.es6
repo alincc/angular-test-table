@@ -24,28 +24,33 @@ class TestApp {
         this.testService = ts;
     };
 
-    run=function(counter){
+    run(counter){
         var vm = this;
+
+        // Disable buttons
         this.running = true;
+
+        // clear table
         this.records = new Array();
 
+        // Load data
         this.testService.load(counter).then(
             (res) => {
                 console.log('Loading records completed');
 
-                // Mark as started (before JSON parse)
-                this.testService.setStart();
-
-                // Set records
+                // Parse results
                 var data = JSON.parse(res);
 
                 // Start measure
                 var start = new Date();
+
+                // Bind
                 this.records = data;
 
+                // Measure total
                 setTimeout(function(){
                     vm.duration = new Date() - start;
-                }, 0, true);
+                });
 
                 this.running = false;
             },
@@ -54,10 +59,6 @@ class TestApp {
                 this.running = false;
             });
     };
-
-    getDuration(){
-        return this.duration;
-    }
 }
 
 bootstrap(TestApp);

@@ -20,30 +20,27 @@ System.register("TestApp", ["angular2/angular2", "TestTable", "services/TestServ
     execute: function() {
       TestApp = (function() {
         function TestApp(ts) {
-          this.running = false, this.run = function(counter) {
+          this.running = false;
+          this.testService = ts;
+        }
+        return ($traceurRuntime.createClass)(TestApp, {run: function(counter) {
             var $__0 = this;
             var vm = this;
             this.running = true;
             this.records = new Array();
             this.testService.load(counter).then((function(res) {
               console.log('Loading records completed');
-              $__0.testService.setStart();
               var data = JSON.parse(res);
               var start = new Date();
               $__0.records = data;
               setTimeout(function() {
                 vm.duration = new Date() - start;
-              }, 0, true);
+              });
               $__0.running = false;
             }), (function(err) {
               console.log(err);
               $__0.running = false;
             }));
-          };
-          this.testService = ts;
-        }
-        return ($traceurRuntime.createClass)(TestApp, {getDuration: function() {
-            return this.duration;
           }}, {});
       }());
       Object.defineProperty(TestApp, "annotations", {get: function() {
