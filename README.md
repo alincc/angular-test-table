@@ -31,6 +31,11 @@ The content is a JSON array with 14 fields.
 - Angular v2.0.0-alpha25
 - ReactJS 0.13.0
 
+### Running the benchmarks
+
+1. `$(npm bin)/webdriver-manager install`
+2. `$(npm bin)/protractor protractor.conf.js`
+
 TODO
 - Aurelia
 - raw (direct DOM manipulation)

@@ -9,8 +9,10 @@
   "author": "Alin Capitanescu",
   "license": "MIT",
   "dependencies": {
+    "benchpress": "^2.0.0-alpha.26",
     "bootstrap": "^3.3.4",
-    "http-server": "^0.8.0"
+    "http-server": "^0.8.0",
+    "protractor": "^2.1.0"
   },
   "devDependencies": {
     "json-schema-faker": "^0.1.10",
