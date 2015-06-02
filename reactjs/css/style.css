@@ -1,10 +1,13 @@
-
-.selected, a.selected:hover , a.selected:active {
-	background-color: #337ab7;
-	color: white;
+.well {
+    background-color: transparent;
 }
 
-#table{
+.selected, a.selected:hover, a.selected:active {
+    background-color: #337ab7;
+    color: white;
+}
+
+#table {
     overflow: auto;
     height: 400px;
 }

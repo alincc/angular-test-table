@@ -87,8 +87,8 @@ var Header = React.createClass({
                     <a className="btn btn-lg btn-success " role="button" onClick={this.handleClick.bind(null, 5000)}>5000 records</a>
                 </p>
 
-                <div className="well">
-                    Duration: {this.props.duration} ms
+                <div className="well well-sm">
+                    <span className="text-muted">Duration to render</span> {this.props.duration} ms
                 </div>
             </div>
         );
@@ -103,6 +103,7 @@ var TestApp = React.createClass({
     },
     runTest: function (counter) {
         this.setState({rows: []});
+
         $.ajax({
             url: '../data/' + counter + '.json',
             dataType: 'json',
@@ -112,9 +113,10 @@ var TestApp = React.createClass({
                 this.setState({rows: data});
 
                 var start = new Date();
+
                 React.render(<TestTable rows={this.state.rows}></TestTable>, document.getElementById("table"));
 
-                this.setState({duration:  new Date() - start});
+                this.setState({duration: new Date() - start});
             }.bind(this),
             error: function (xhr, status, err) {
                 console.error('Error', status, err.toString());

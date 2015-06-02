@@ -20,12 +20,13 @@ System.register("TestApp", ["angular2/angular2", "TestTable", "services/TestServ
     execute: function() {
       TestApp = (function() {
         function TestApp(ts) {
-          this.running = false;
+          this.running = false, this.duration = 0;
           this.testService = ts;
         }
         return ($traceurRuntime.createClass)(TestApp, {run: function(counter) {
             var $__0 = this;
             var vm = this;
+            this.duration = 0;
             this.running = true;
             this.records = new Array();
             this.testService.load(counter).then((function(res) {

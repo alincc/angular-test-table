@@ -18,7 +18,7 @@ import {TestService} from 'services/TestService';
 class TestApp {
     running = false;
     testService: TestService;
-    duration;
+    duration = 0;
 
     constructor(ts:TestService) {
         this.testService = ts;
@@ -26,6 +26,8 @@ class TestApp {
 
     run(counter){
         var vm = this;
+
+        this.duration = 0;
 
         // Disable buttons
         this.running = true;

@@ -1,3 +1,7 @@
+.well {
+    background-color: transparent;
+}
+
 #table{
     overflow: auto;
     height: 400px;
