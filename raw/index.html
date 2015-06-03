@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="Alin Capitanescu">
+
+    <title>Test with large dataset</title>
+
+    <link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="page-header">
+        <h1>DOM using createFragment</h1>
+
+        <p class="lead">Render a table using a large dataset</p>
+    </div>
+
+    <p>
+        <a class="btn btn-lg btn-link" role="button" href="../angular1/index.html">AngularJS v1.2.20</a>
+        <a class="btn btn-lg btn-link" role="button" href="../angular1/index2.html">AngularJS v1.3.9</a>
+        <a class="btn btn-lg btn-link" role="button" href="../angular1/index3.html">AngularJS v1.4.0</a>
+        <a class="btn btn-lg btn-link" role="button" href="../angular2/dist/index.html">AngularJS v2.0.0-alpha25</a>
+        <a class="btn btn-lg btn-link" role="button" href="../reactjs/index.html">ReactJS 0.13.0</a>
+        <a class="btn btn-lg btn-link selected" role="button">HTML DOM</a>
+    </p>
+
+    <p>
+        <a class="btn btn-lg btn-success" role="button" onclick="testApp.run(500)">500 records</a>
+        <a class="btn btn-lg btn-success" role="button" onclick="testApp.run(1500)">1500 records</a>
+        <a class="btn btn-lg btn-success" role="button" onclick="testApp.run(2500)">2500 records</a>
+        <a class="btn btn-lg btn-success" role="button" onclick="testApp.run(5000)">5000 records</a>
+    </p>
+
+    <div class="well well-sm">
+        <div><span className="text-muted">Duration:&nbsp;</span> <span id="duration"></span> ms</div>
+    </div>
+
+    <div class="row">
+        <div id="table"></div>
+    </div>
+</div>
+<!-- /container -->
+
+
+<template id="baseTable">
+    <table class="table">
+        <thead>
+        <tr>
+            <th><input type="checkbox"/></th>
+            <th>Status</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>field1</th>
+            <th>field2</th>
+            <th>field3</th>
+            <th>field4</th>
+            <th>field5</th>
+            <th>field6Date</th>
+            <th>field7</th>
+            <th>field8</th>
+            <th>field9</th>
+            <th>field10</th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</template>
+
+<template id="testRow">
+    <tr>
+        <td><input type="checkbox"/></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</template>
+
+<script src="libs/memory-stats/memory-stats.js"></script>
+<script>
+        var stats = new MemoryStats();
+        stats.domElement.style.position = 'fixed';
+        stats.domElement.style.right        = '0px';
+        stats.domElement.style.bottom       = '0px';
+        document.body.appendChild( stats.domElement );
+        requestAnimationFrame(function rAFloop(){
+            stats.update();
+            requestAnimationFrame(rAFloop);
+        });
+
+</script>
+
+<script src="app/app.js"></script>
+</body>
+</html>

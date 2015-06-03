@@ -91,19 +91,18 @@ angular.module('app', [])
     // Directive detects when last row is rendered
     // http://tech.small-improvements.com/2013/09/10/angularjs-performance-with-large-lists/
     .directive('postRepeatDirective',
-    ['$rootScope', '$timeout', '$log', 'TestService',
+    	['$rootScope', '$timeout', '$log', 'TestService',
         function ($rootScope, $timeout, $log, TestService) {
             return function (scope, element, attrs) {
                 if (scope.$last) {
+					var ref = TestService.getStart();
                     $timeout(function () {
-                        var ref = TestService.getStart();
-                        var end = new Date();
-                        var duration = end - ref;
+                        var duration = new Date() - ref;
 
-                        $log.debug("## DOM rendering took: " + (end - ref) + " ms");
-
+                        $log.debug(duration);
                         $rootScope.$emit('renderComplete', duration);
-                    });
+                        //$rootScope.$digest();
+                    }/*, 0, false*/);
                 }
             };
         }
