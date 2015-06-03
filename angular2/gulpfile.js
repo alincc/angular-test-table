@@ -16,7 +16,8 @@ var PATHS = {
         'node_modules/angular2/node_modules/zone.js/dist/zone.js',
         'node_modules/angular2/node_modules/zone.js/dist/long-stack-trace-zone.js',
         'node_modules/reflect-metadata/Reflect.js',
-        'node_modules/reflect-metadata/Reflect.js.map',
+        'node_modules/reflect-metadata/Reflect.js',
+        'node_modules/memory-stats/memory-stats.js',
     ]
 };
 
@@ -53,15 +54,23 @@ gulp.task('bootstrap', function () {
         .pipe(gulp.dest('dist/lib/bootstrap'));
 });
 
-// Data
-//gulp.task('data', function () {
-//    gulp.src([
-//        '../data/**/*'
-//    ])
-//        .pipe(gulp.dest('dist/data'));
-//});
+// Bootstrap
+gulp.task('memory-stats', function () {
+    gulp.src([
+        './node_modules/memory-stats/**/*'
+    ])
+        .pipe(gulp.dest('dist/lib/memory-stats'));
+});
 
-gulp.task('libs', ['angular2', 'bootstrap'/*,'data'*/], function () {
+// Data
+gulp.task('data', function () {
+    gulp.src([
+        '../data/**/*'
+    ])
+        .pipe(gulp.dest('dist/data'));
+});
+
+gulp.task('libs', ['angular2', 'bootstrap', 'memory-stats'/*,'data'*/], function () {
     var size = require('gulp-size');
     return gulp.src(PATHS.lib)
         .pipe(size({showFiles: true, gzip: true}))

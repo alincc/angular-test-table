@@ -25,6 +25,21 @@
 <body>
     <test-app></test-app>
 
+
+    <script src="lib/memory-stats/memory-stats.js"></script>
+    <script>
+        var stats = new MemoryStats();
+        stats.domElement.style.position = 'fixed';
+        stats.domElement.style.right        = '0px';
+        stats.domElement.style.bottom       = '0px';
+        document.body.appendChild( stats.domElement );
+        requestAnimationFrame(function rAFloop(){
+            stats.update();
+            requestAnimationFrame(rAFloop);
+        });
+    </script>
+
+
     <!-- ES6-related imports -->
     <script src="lib/traceur-runtime.js"></script>
     <script src="lib/es6-module-loader-sans-promises.src.js"></script>

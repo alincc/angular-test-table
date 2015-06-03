@@ -11,14 +11,14 @@ System.register("services/TestService", ["angular2/angular2", "angular2/src/serv
       XHR = $__m.XHR;
     }],
     execute: function() {
-      TestService = (function() {
+      TestService = function() {
         function TestService(xhr) {
           this.$http = xhr;
         }
         return ($traceurRuntime.createClass)(TestService, {load: function(id) {
             return this.$http.get('../../data/' + id + '.json');
           }}, {});
-      }());
+      }();
       $__export("TestService", TestService);
       Object.defineProperty(TestService, "parameters", {get: function() {
           return [[XHR]];

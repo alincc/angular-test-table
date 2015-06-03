@@ -17,12 +17,12 @@ System.register("TestTable", ["angular2/angular2", "services/TestService"], func
       TestService = $__m.TestService;
     }],
     execute: function() {
-      TestTable = (function() {
+      TestTable = function() {
         function TestTable(testService) {
           this.testService = testService;
         }
         return ($traceurRuntime.createClass)(TestTable, {}, {});
-      }());
+      }();
       $__export("TestTable", TestTable);
       Object.defineProperty(TestTable, "annotations", {get: function() {
           return [new Component({

@@ -18,7 +18,7 @@ System.register("TestApp", ["angular2/angular2", "TestTable", "services/TestServ
       TestService = $__m.TestService;
     }],
     execute: function() {
-      TestApp = (function() {
+      TestApp = function() {
         function TestApp(ts) {
           this.running = false, this.duration = 0;
           this.testService = ts;
@@ -29,7 +29,7 @@ System.register("TestApp", ["angular2/angular2", "TestTable", "services/TestServ
             this.duration = 0;
             this.running = true;
             this.records = new Array();
-            this.testService.load(counter).then((function(res) {
+            this.testService.load(counter).then(function(res) {
               console.log('Loading records completed');
               var data = JSON.parse(res);
               var start = new Date();
@@ -38,12 +38,12 @@ System.register("TestApp", ["angular2/angular2", "TestTable", "services/TestServ
                 vm.duration = new Date() - start;
               });
               $__0.running = false;
-            }), (function(err) {
+            }, function(err) {
               console.log(err);
               $__0.running = false;
-            }));
+            });
           }}, {});
-      }());
+      }();
       Object.defineProperty(TestApp, "annotations", {get: function() {
           return [new Component({
             selector: 'test-app',

@@ -22,10 +22,11 @@
     "through2": "~0.6.3"
   },
   "dependencies": {
-    "reflect-metadata": "^0.1.0",
     "angular2": "2.0.0-alpha.25",
+    "bootstrap": "^3.3.4",
     "es6-module-loader": "0.16.5",
-    "systemjs": "0.16.7",
-    "bootstrap": "^3.3.4"
+    "memory-stats": "^1.0.2",
+    "reflect-metadata": "^0.1.0",
+    "systemjs": "0.16.7"
   }
 }

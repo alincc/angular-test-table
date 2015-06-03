@@ -13,6 +13,7 @@
     "http-server": "^0.8.0"
   },
   "devDependencies": {
-    "json-schema-faker": "^0.1.10"
+    "json-schema-faker": "^0.1.10",
+    "memory-stats": "^1.0.2"
   }
 }
