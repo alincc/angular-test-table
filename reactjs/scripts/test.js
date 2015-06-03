@@ -6,7 +6,7 @@ var TestTable = React.createClass({
 
                 rows.push(<tr>
                     <td>
-                        <input type="checkbox" ng-model="row.select"/>
+                        <input type="checkbox"/>
                     </td>
 
                     <td>{ row.status }</td>
@@ -81,10 +81,10 @@ var Header = React.createClass({
                 </p>
 
                 <p>
-                    <a className="btn btn-lg btn-success" role="button" onClick={this.handleClick.bind(null, 500)}>500 records</a>
-                    <a className="btn btn-lg btn-success" role="button" onClick={this.handleClick.bind(null, 1500)}>1500 records</a>
-                    <a className="btn btn-lg btn-success" role="button" onClick={this.handleClick.bind(null, 2500)}>2500 records</a>
-                    <a className="btn btn-lg btn-success " role="button" onClick={this.handleClick.bind(null, 5000)}>5000 records</a>
+                    <a className="btn btn-lg btn-success" role="button" disabled={this.props.running} onClick={this.handleClick.bind(null, 500)}>500 records</a>
+                    <a className="btn btn-lg btn-success" role="button" disabled={this.props.running} onClick={this.handleClick.bind(null, 1500)}>1500 records</a>
+                    <a className="btn btn-lg btn-success" role="button" disabled={this.props.running} onClick={this.handleClick.bind(null, 2500)}>2500 records</a>
+                    <a className="btn btn-lg btn-success " role="button" disabled={this.props.running} onClick={this.handleClick.bind(null, 5000)}>5000 records</a>
                 </p>
 
                 <div className="well well-sm">
@@ -102,7 +102,7 @@ var TestApp = React.createClass({
         };
     },
     runTest: function (counter) {
-        this.setState({rows: []});
+        this.setState({rows: [], running: true});
 
         $.ajax({
             url: '../data/' + counter + '.json',
@@ -110,7 +110,7 @@ var TestApp = React.createClass({
             cache: true,
             success: function (data) {
                 console.log('Loading records completed');
-                this.setState({rows: data});
+                this.setState({rows: data, running: false});
 
                 var start = new Date();
 
@@ -126,7 +126,7 @@ var TestApp = React.createClass({
     render: function () {
         return (
             <div>
-                <Header runTest={this.runTest} duration={this.state.duration}></Header>
+                <Header runTest={this.runTest} running={this.state.running} duration={this.state.duration}></Header>
                 <div id="table"></div>
             </div>
         );

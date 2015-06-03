@@ -1,5 +1,10 @@
 angular.module('app', [])
 
+	.config(['$compileProvider', function ($compileProvider) {
+		if(angular.version.minor>2)
+			$compileProvider.debugInfoEnabled(false);
+	}])
+
     .controller('TestRendering', ['$rootScope', '$location', '$scope', 'TestService',
         function ($rootScope, $location, $scope, TestService) {
 
