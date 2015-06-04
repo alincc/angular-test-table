@@ -3,9 +3,7 @@ import {TestService} from 'services/TestService';
 
 @Component({
     selector: 'test-table',
-    properties: {
-        'dataset':'dataset'
-    },
+    properties: ['dataset'],
     services: [TestService]
 })
 @View({

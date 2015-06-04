@@ -27,7 +27,7 @@
   "gitHead": "abc193ea2c2fa6d00b906eac65ba80ac6a9481bc",
   "_id": "memory-stats@1.0.2",
   "_shasum": "806690763e83982270038563bbd153fd55a8be85",
-  "_from": "memory-stats@",
+  "_from": "memory-stats@>=1.0.2 <2.0.0",
   "_npmVersion": "2.2.0",
   "_nodeVersion": "0.10.20",
   "_npmUser": {
@@ -45,6 +45,5 @@
     "tarball": "http://registry.npmjs.org/memory-stats/-/memory-stats-1.0.2.tgz"
   },
   "directories": {},
-  "_resolved": "https://registry.npmjs.org/memory-stats/-/memory-stats-1.0.2.tgz",
-  "readme": "ERROR: No README data found!"
+  "_resolved": "https://registry.npmjs.org/memory-stats/-/memory-stats-1.0.2.tgz"
 }

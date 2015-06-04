@@ -88,6 +88,9 @@ gulp.task('angular2', function () {
             // auto-detection fails to detect properly here - https://github.com/systemjs/builder/issues/123
             'rx': {
                 format: 'cjs'
+            },
+            'angular2/src/core/compiler/interfaces': {
+                format: 'cjs'
             }
         }
     };
