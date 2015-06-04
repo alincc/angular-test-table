@@ -24,26 +24,12 @@
     "url": "https://github.com/bunnybones1/memory-stats.js/issues"
   },
   "homepage": "https://github.com/bunnybones1/memory-stats.js",
-  "gitHead": "abc193ea2c2fa6d00b906eac65ba80ac6a9481bc",
+  "readme": "## memory-stats.js\n\nLike [stats.js](https://github.com/mrdoob/stats.js/) but for JS memory\n\n[@jeromeetienne](https://github.com/jeromeetienne/), inspired by mrdoob's stats.js code, wrote this as part of [tquery](https://github.com/jeromeetienne/tquery). I've now promoted it to a standalone repo and cleaned it all up.\n\n![image](http://i.imgur.com/eUCFcAH.gif)\n\n### Usage:\n\n1. Start Chrome [with](http://www.chromium.org/developers/how-tos/run-chromium-with-flags) `--enable-precise-memory-info`\n    - Otherwise the results from performance.memory are bucketed and less useful.\n1. Include memory.stats.js\n1. Instantiate it (`stats = new MemoryStats()`, add the `stats.element` to the DOM, and run `stats.update()` regularly.\n\nThat might look something like:\n\n```js\n    var stats = new MemoryStats();\n\n    stats.domElement.style.position = 'fixed';\n    stats.domElement.style.right        = '0px';\n    stats.domElement.style.bottom       = '0px';\n    \n    document.body.appendChild( stats.domElement );\n\n    requestAnimationFrame(function rAFloop(){\n        stats.update();\n        requestAnimationFrame(rAFloop);\n    });\n```\n\nRun Chrome with the flag and open `demo/index.html` to see it in action.\n\n# Framework adaptors\n\n* Angular component by [@livingobjects](https://github.com/livingobjects): https://github.com/livingobjects/angular-memory-stats\n* Ember addon by [@stefanpenner](https://github.com/stefanpenner): https://github.com/stefanpenner/ember-browser-stats\n* Rails gem by [@jurre](https://github.com/jurre):\nhttps://github.com/jurre/memory-stats-js-rails\n",
+  "readmeFilename": "README.md",
   "_id": "memory-stats@1.0.2",
-  "_shasum": "806690763e83982270038563bbd153fd55a8be85",
-  "_from": "memory-stats@>=1.0.2 <2.0.0",
-  "_npmVersion": "2.2.0",
-  "_nodeVersion": "0.10.20",
-  "_npmUser": {
-    "name": "bunnybones1",
-    "email": "oz@bunnybones.com"
-  },
-  "maintainers": [
-    {
-      "name": "bunnybones1",
-      "email": "oz@bunnybones.com"
-    }
-  ],
   "dist": {
-    "shasum": "806690763e83982270038563bbd153fd55a8be85",
-    "tarball": "http://registry.npmjs.org/memory-stats/-/memory-stats-1.0.2.tgz"
+    "shasum": "c9d99ea7d59547849ffdb90589e9011c5e7c4a08"
   },
-  "directories": {},
+  "_from": "memory-stats@1.0.2",
   "_resolved": "https://registry.npmjs.org/memory-stats/-/memory-stats-1.0.2.tgz"
 }
