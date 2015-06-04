@@ -33,6 +33,10 @@ var pages = [
     name: 'React0.13.0',
     url: 'http://localhost:8080/reactjs/index.html',
   },
+  {
+    name: 'HTML DOM',
+    url: 'http://localhost:8080/raw/index.html',
+  },
 ];
 
 var buttons = [
