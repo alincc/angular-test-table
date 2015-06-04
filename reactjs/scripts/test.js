@@ -104,6 +104,8 @@ var TestApp = React.createClass({
     },
     runTest: function (counter) {
         this.setState({rows: [], running: true});
+		// Force clear table before
+        React.render(<TestTable rows={[]}></TestTable>, document.getElementById("table"));
 
         $.ajax({
             url: '../data/' + counter + '.json',
@@ -111,12 +113,10 @@ var TestApp = React.createClass({
             cache: true,
             success: function (data) {
                 console.log('Loading records completed');
-                this.setState({rows: data, running: false});
 
                 var start = new Date();
-
+                this.setState({rows: data, running: false});
                 React.render(<TestTable rows={this.state.rows}></TestTable>, document.getElementById("table"));
-
                 this.setState({duration: new Date() - start});
             }.bind(this),
             error: function (xhr, status, err) {
