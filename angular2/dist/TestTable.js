@@ -27,7 +27,7 @@ System.register("TestTable", ["angular2/angular2", "services/TestService"], func
       Object.defineProperty(TestTable, "annotations", {get: function() {
           return [new Component({
             selector: 'test-table',
-            properties: {'dataset': 'dataset'},
+            properties: ['dataset'],
             services: [TestService]
           }), new View({
             templateUrl: 'templates/test-table.html',
