@@ -1,0 +1,49 @@
+{
+  "name": "memory-stats",
+  "version": "1.0.2",
+  "description": "Minimal monitor for JS Heap Size via performance.memory",
+  "main": "memory-stats.js",
+  "scripts": {
+    "test": "beefy test.js --live --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bunnybones1/memory-stats.js.git"
+  },
+  "keywords": [
+    "performance",
+    "memory",
+    "chrome"
+  ],
+  "authors": [
+    "Paul Irish <paul.irish@gmail.com>",
+    "Tomasz Dysinski <tom@jam3.com>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bunnybones1/memory-stats.js/issues"
+  },
+  "homepage": "https://github.com/bunnybones1/memory-stats.js",
+  "gitHead": "abc193ea2c2fa6d00b906eac65ba80ac6a9481bc",
+  "_id": "memory-stats@1.0.2",
+  "_shasum": "806690763e83982270038563bbd153fd55a8be85",
+  "_from": "memory-stats@",
+  "_npmVersion": "2.2.0",
+  "_nodeVersion": "0.10.20",
+  "_npmUser": {
+    "name": "bunnybones1",
+    "email": "oz@bunnybones.com"
+  },
+  "maintainers": [
+    {
+      "name": "bunnybones1",
+      "email": "oz@bunnybones.com"
+    }
+  ],
+  "dist": {
+    "shasum": "806690763e83982270038563bbd153fd55a8be85",
+    "tarball": "http://registry.npmjs.org/memory-stats/-/memory-stats-1.0.2.tgz"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/memory-stats/-/memory-stats-1.0.2.tgz"
+}
