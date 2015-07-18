@@ -40,6 +40,7 @@ Tests
 - AngularJS v1.4.0
 - Angular v2.0.0-alpha.26
 - ReactJS 0.13.0
+- InfernoJS 0.1.1
 - HTML DOM
 
 TODO
