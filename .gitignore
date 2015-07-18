@@ -30,3 +30,4 @@ node_modules
 
 #Data files
 data/*
+.DS_Store
