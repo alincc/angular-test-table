@@ -30,6 +30,10 @@ var pages = [
     ignoreSynchronization: true,
   },
   {
+    name: 'InfenroJS0.1.1',
+    url: 'http://localhost:8080/infernojs/index.html',
+  },
+  {
     name: 'React0.13.0',
     url: 'http://localhost:8080/reactjs/index.html',
   },

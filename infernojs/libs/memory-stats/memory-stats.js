@@ -95,5 +95,3 @@ function MemoryStats(){
 	}
 
 };
-
-module.exports = MemoryStats;

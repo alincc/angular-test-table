@@ -77,8 +77,8 @@ var Header = React.createClass({
                     <a className="btn btn-lg btn-link" role="button" href="../angular1/index2.html">AngularJS v1.3.9</a>
                     <a className="btn btn-lg btn-link" role="button" href="../angular1/index3.html">AngularJS v1.4.0</a>
                     <a className="btn btn-lg btn-link" role="button" href="../angular2/dist/index.html">AngularJS v2.0.0-alpha.26</a>
-                    <a className="btn btn-lg btn-link" role="button" href="../infernojs/index.html">InfernoJS 0.1.0</a>
                     <a className="btn btn-lg btn-link selected" role="button">ReactJs 0.13.0</a>
+                    <a className="btn btn-lg btn-link" role="button" href="../infernojs/index.html">InfernoJS 0.1.1</a>
                     <a className="btn btn-lg btn-link" role="button" href="../raw/index.html">HTML DOM</a>
                 </p>
 
