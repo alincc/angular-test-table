@@ -8,7 +8,6 @@ t7.module(function(t7) {
         var rows = [];
         if (this.props.rows) {
           this.props.rows.forEach(function (row) {
-            debugger;
             rows.push(t7`
               <tr>
                 <td>
