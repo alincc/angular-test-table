@@ -35,7 +35,7 @@ t7.module(function(t7) {
         children: 'HTML DOM'}]},{tag: 'p',children: [{tag: Inferno.Tag.A,attrs: {'class':'btn btn-lg btn-success','role':'button','disabled':this.props.running,'onClick':this.handleClick.bind(this, 500)},
         children: '500 records'},{tag: Inferno.Tag.A,attrs: {'class':'btn btn-lg btn-success','role':'button','disabled':this.props.running,'onClick':this.handleClick.bind(this, 1500)},
         children: '1500 records'},{tag: Inferno.Tag.A,attrs: {'class':'btn btn-lg btn-success','role':'button','disabled':this.props.running,'onClick':this.handleClick.bind(this, 2500)},
-        children: '2500 records'},{tag: Inferno.Tag.A,attrs: {'class':'btn btn-lg btn-success','role':'button','disabled':this.props.running,'onClick':this.handleClick.bind(this, 1500)},
+        children: '2500 records'},{tag: Inferno.Tag.A,attrs: {'class':'btn btn-lg btn-success','role':'button','disabled':this.props.running,'onClick':this.handleClick.bind(this, 5000)},
         children: '5000 records'}]},{tag: Inferno.Tag.DIV,attrs: {'class':'well well-sm'},
         children: [{tag: Inferno.Tag.SPAN,attrs: {'class':'text-muted'},
         children: 'Duration to render'},this.props.duration || "",' ms']}]};
