@@ -72,7 +72,7 @@ t7.module(function(t7) {
                     <a class="btn btn-lg btn-link" role="button" href="../angular1/index3.html">AngularJS v1.4.0</a>
                     <a class="btn btn-lg btn-link" role="button" href="../angular2/dist/index.html">AngularJS v2.0.0-alpha.26</a>
                     <a class="btn btn-lg btn-link" role="button" href="../reactjs/index.html">ReactJs 0.13.0</a>
-                    <a class="btn btn-lg btn-link selected" role="button">InfernoJS 0.1.1</a>
+                    <a class="btn btn-lg btn-link selected" role="button">InfernoJS 0.2.3</a>
                     <a class="btn btn-lg btn-link" role="button" href="../raw/index.html">HTML DOM</a>
                 </p>
 
