@@ -11,3 +11,7 @@
 	background-color: #337ab7;
 	color: white;
 }
+
+.btn-group-lg>.btn, .btn-lg {
+  font-size: 16px;
+}

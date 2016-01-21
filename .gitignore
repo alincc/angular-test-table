@@ -27,3 +27,7 @@ build/Release
 node_modules
 
 .idea
+
+#Data files
+data/*
+.DS_Store
